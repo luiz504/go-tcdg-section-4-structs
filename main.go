@@ -2,30 +2,26 @@ package main
 
 import "fmt"
 
+type contactInfo struct {
+	email   string
+	zipCode int
+}
+
 type person struct {
 	firstName string
 	lastName  string
+	contact   contactInfo
 }
 
 func main() {
-	// very easy to fuck up if need to change the struct fields order, find some lint config to help with that.
-	// alex := person{
-	// 	"Alex",
-	// 	"Smith",
-	// }
-
-	// alex := person{
-	// 	firstName: "Alex",
-	// 	lastName:  "Smith",
-	// }
-
-	var alex person
-	fmt.Println(alex)       // { } // Zero Value
-	fmt.Printf("%+v", alex) // {firstName:"" lastName:""}
-
-	alex.firstName = "Alex"
-	alex.lastName = "Smith"
-	fmt.Println(alex)       // {Alex Smith}
-	fmt.Printf("%+v", alex) // {firstName:"Alex" lastName:"Smith"}
-
+	jim := person{
+		firstName: "Jim",
+		lastName:  "Smith",
+		contact: contactInfo{
+			email:   "jim@example.com",
+			zipCode: 12345,
+		},
+	}
+	fmt.Println(jim)       // {Jim Smith {jim@example.com 12345}}
+	fmt.Printf("%+v", jim) // {firstName:Jim lastName:Smith contact:{email:jim@example.com zipCode:12345}}
 }

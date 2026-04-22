@@ -5,9 +5,10 @@ This project was made to explore the Go structs
 
 ## 💡 Dev Notes: JS/TS → Go
 
-* **First Impressions:**:
+* **Impressions:**:
   * Apparently, structs are kind like objects in JS.
   * Logging struct feels weird #console.log :), have to explore more fmt methods :/.
+  * The , on the end of each line makes me miss prettier auto-formatting in VSCode :), let's check if there's a way to do it.
 
 ## Notes
 
