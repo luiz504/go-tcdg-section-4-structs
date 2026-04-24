@@ -10,18 +10,28 @@ type contactInfo struct {
 type person struct {
 	firstName string
 	lastName  string
-	contact   contactInfo
+	contactInfo
+}
+
+func (p person) updateFirstName(firstName string) {
+	p.firstName = firstName
+}
+
+func (p person) print() {
+	fmt.Printf("%+v\n", p)
 }
 
 func main() {
 	jim := person{
 		firstName: "Jim",
 		lastName:  "Smith",
-		contact: contactInfo{
+		contactInfo: contactInfo{
 			email:   "jim@example.com",
 			zipCode: 12345,
 		},
 	}
-	fmt.Println(jim)       // {Jim Smith {jim@example.com 12345}}
-	fmt.Printf("%+v", jim) // {firstName:Jim lastName:Smith contact:{email:jim@example.com zipCode:12345}}
+	jim.print() // name: Jim
+	jim.updateFirstName("Jimmy")
+	jim.print() // name: Jim not mutable?! why? points uhhh
+
 }

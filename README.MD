@@ -9,6 +9,7 @@ This project was made to explore the Go structs
   * Apparently, structs are kind like objects in JS.
   * Logging struct feels weird #console.log :), have to explore more fmt methods :/.
   * The , on the end of each line makes me miss prettier auto-formatting in VSCode :), let's check if there's a way to do it.
+  * Mutation of struct field doesn't work like JS, lets dive into it. Pointers ahead captain!.
 
 ## Notes
 
