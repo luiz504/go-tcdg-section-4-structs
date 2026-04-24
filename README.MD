@@ -11,6 +11,7 @@ This project was made to explore the Go structs
   * The , on the end of each line makes me miss prettier auto-formatting in VSCode :), let's check if there's a way to do it.
   * Mutation of struct field doesn't work like JS, lets dive into it. Pointers ahead captain!.
   * Humm, apparently, the receivers methods clone the (kind this value) to a different pointer, keeping the original intact. (Pass by value language)
+  * Some magic syntax on pointers, kinda on my exploration, only change the receiver, argument adding the *, resolved but the class showed some boilerplate, maybe it's some old-school way to do it.
 
 ## Notes
 

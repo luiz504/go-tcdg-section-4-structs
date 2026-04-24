@@ -13,8 +13,12 @@ type person struct {
 	contactInfo
 }
 
-func (p person) updateFirstName(firstName string) {
-	p.firstName = firstName
+//	func (p person) updateFirstName(firstName string) {
+//		p.firstName = firstName
+//	}
+
+func (pointerToPerson *person) updateFirstName(firstName string) {
+	(*pointerToPerson).firstName = firstName
 }
 
 func (p person) print() {
@@ -31,6 +35,10 @@ func main() {
 		},
 	}
 	jim.print() // name: Jim
-	jim.updateFirstName("Jimmy")
-	jim.print() // name: Jim not mutable?! why? points uhhh
+	// jim.updateFirstName("Jimmy")
+
+	JimmyPointer := &jim
+	JimmyPointer.updateFirstName("Jimmy")
+	// jim.updateFirstName("Jimmy")
+	jim.print() // name: Jimmy
 }
