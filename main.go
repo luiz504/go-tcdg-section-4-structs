@@ -33,5 +33,4 @@ func main() {
 	jim.print() // name: Jim
 	jim.updateFirstName("Jimmy")
 	jim.print() // name: Jim not mutable?! why? points uhhh
-
 }
