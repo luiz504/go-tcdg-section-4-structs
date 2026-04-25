@@ -26,6 +26,12 @@ func goPointerGotChas() {
 	updateStringWithPointer(&name)
 	fmt.Println(name) // Alex with pointer
 
+	namePointer := &name
+	fmt.Println(&namePointer)
+	printPointer(namePointer)
+	// even passing the pointer as a parameter, it  prints differently memory address
+	// the pointers are cloned, their head is in different memory locations but the reference is the same
+
 }
 
 func updateSlice(s customSlice) {
@@ -41,4 +47,8 @@ func updateString(n string) {
 }
 func updateStringWithPointer(n *string) {
 	*n = "Alex with pointer"
+}
+
+func printPointer(namePointer *string) {
+	fmt.Println(&namePointer)
 }
