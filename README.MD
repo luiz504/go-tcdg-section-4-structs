@@ -18,13 +18,11 @@ This project was made to explore the Go structs
 
 ***Behavior***: When passed, the "Header" is copied, but it points to the same underlying data. You can mutate contents without an explicit pointer.
 
-## Notes
+## Type |> Zero Value
 
 When declaring some variables, and not assigning them a value, they are zero valued.
 -- It's weird, not default undefined like JS, not nil either, let's check how they manage it.
 -- Apparently, with structs, the zero value will follow the fields' types.
-
-### ype |> Zero Value
 
 * string |> ""
 * int |> 0
