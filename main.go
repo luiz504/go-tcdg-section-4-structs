@@ -35,33 +35,35 @@ func (p person) print() {
 }
 
 func main() {
-	jim := person{
-		firstName: "Jim",
-		lastName:  "Smith",
-		contactInfo: contactInfo{
-			email:   "jim@example.com",
-			zipCode: 12345,
-		},
-	}
 
-	jim.print() //firstName:Jim lastName:Smith contactInfo:{email:jim@example.com zipCode:12345}}
-	jim.tryUpdateFirstName("Jimmy")
-	jim.print() //firstName:Jim lastName:Smith contactInfo:{email:jim@example.com zipCode:12345}}
+	goPointerGotChas()
+	// jim := person{
+	// 	firstName: "Jim",
+	// 	lastName:  "Smith",
+	// 	contactInfo: contactInfo{
+	// 		email:   "jim@example.com",
+	// 		zipCode: 12345,
+	// 	},
+	// }
 
-	// the & operator is used to get the address of a variable
-	JimmyPointer := &jim
-	fmt.Println("var:", jim)              //var: {Jim Smith {jim@example.com 12345}}
-	fmt.Println("pointer:", JimmyPointer) //pointer: &{Jim Smith {jim@example.com 12345}}
-	//var JimmyPointer *person
-	JimmyPointer.updateFirstName("Jimmy")
-	//var jim person
-	jim.print() //{firstName:Jimmy lastName:Smith contactInfo:{email:jim@example.com zipCode:12345}}
+	// jim.print() //firstName:Jim lastName:Smith contactInfo:{email:jim@example.com zipCode:12345}}
+	// jim.tryUpdateFirstName("Jimmy")
+	// jim.print() //firstName:Jim lastName:Smith contactInfo:{email:jim@example.com zipCode:12345}}
 
-	//var jim person
-	jim.updateFirstName("Bob")
-	// even with miss match types, it works
-	// if the method declare the receiver as a pointer, it will work even calling the method on a value jim
+	// // the & operator is used to get the address of a variable
+	// JimmyPointer := &jim
+	// fmt.Println("var:", jim)              //var: {Jim Smith {jim@example.com 12345}}
+	// fmt.Println("pointer:", JimmyPointer) //pointer: &{Jim Smith {jim@example.com 12345}}
+	// //var JimmyPointer *person
+	// JimmyPointer.updateFirstName("Jimmy")
+	// //var jim person
+	// jim.print() //{firstName:Jimmy lastName:Smith contactInfo:{email:jim@example.com zipCode:12345}}
 
-	jim.print() //firstName:Bob lastName:Smith contactInfo:{email:jim@example.com zipCode:12345}}
+	// //var jim person
+	// jim.updateFirstName("Bob")
+	// // even with miss match types, it works
+	// // if the method declare the receiver as a pointer, it will work even calling the method on a value jim
+
+	// jim.print() //firstName:Bob lastName:Smith contactInfo:{email:jim@example.com zipCode:12345}}
 
 }
