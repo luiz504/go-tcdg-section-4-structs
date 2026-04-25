@@ -16,25 +16,7 @@ This project was made to explore the Go structs
   * the (*x) operators only works if the argument has the "*" pointer indicator symbol.
   * the receiver ows the controls, if on the declaration, it says it's a pointer, even calling the method on a value, it works .
 
-  ## Value Types
-
-  int
-  float
-  string
-  bool
-  structs
-
-***Behavior***: These are copied entirely. To mutate the original, you must use a pointer (*).
-
-## Reference Types (Internal Pointer Types (Headers))
-
-  slices
-  maps
-  channels
-  pointers
-  functions
-
-  ***Behavior***: When passed, the "Header" is copied, but it points to the same underlying data. You can mutate contents without an explicit pointer.
+***Behavior***: When passed, the "Header" is copied, but it points to the same underlying data. You can mutate contents without an explicit pointer.
 
 ## Notes
 
@@ -47,3 +29,21 @@ string |> ""
 int |> 0
 float |> 0.0
 bool |> false
+
+## Value Types
+
+* int
+* float
+* string
+* bool
+* structs
+
+***Behavior***: These are copied entirely. To mutate the original, you must use a pointer (*).
+
+## Reference Types (Internal Pointer Types (Headers))
+
+* slices
+* maps
+* channels
+* pointers
+* functions
