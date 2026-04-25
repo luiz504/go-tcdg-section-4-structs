@@ -13,14 +13,18 @@ type person struct {
 	contactInfo
 }
 
+// Value receiver
 func (p person) tryUpdateFirstName(lastName string) {
 	p.lastName = lastName
 }
 
+// Pointer receiver
 // The * is a  type description - it means we are working with a pointer to a person
 func (p *person) updateFirstName(firstName string) {
 	// (*arg) This is an operator - it means we want to manipulate the value the pointer is referencing
+	//var p *person
 	(*p).firstName = firstName
+	//var p *person
 	fmt.Println("updated first name", p) //updated first name &{Jimmy Smith {jim@example.com 12345}}
 	//even not using the * operator in front of the p, it prints with & symbol
 }
@@ -48,8 +52,16 @@ func main() {
 	JimmyPointer := &jim
 	fmt.Println("var:", jim)              //var: {Jim Smith {jim@example.com 12345}}
 	fmt.Println("pointer:", JimmyPointer) //pointer: &{Jim Smith {jim@example.com 12345}}
+	//var JimmyPointer *person
 	JimmyPointer.updateFirstName("Jimmy")
-	// jim.updateFirstName("Jimmy")
+	//var jim person
 	jim.print() //{firstName:Jimmy lastName:Smith contactInfo:{email:jim@example.com zipCode:12345}}
+
+	//var jim person
+	jim.updateFirstName("Bob")
+	// even with miss match types, it works
+	// if the method declare the receiver as a pointer, it will work even calling the method on a value jim
+
+	jim.print() //firstName:Bob lastName:Smith contactInfo:{email:jim@example.com zipCode:12345}}
 
 }

@@ -14,6 +14,7 @@ This project was made to explore the Go structs
   * Some magic syntax on pointers, kinda on my exploration, only change the receiver, argument adding the *, resolved but the class showed some boilerplate, maybe it's some old-school way to do it.
   * When logging a pointer, the output starts with the & symbol to indicate it's a pointer.
   * the (*x) operators only works if the argument has the "*" pointer indicator symbol.
+  * the receiver ows the controls, if on the declaration, it says it's a pointer, even calling the method on a value, it works .
 
 ## Notes
 
