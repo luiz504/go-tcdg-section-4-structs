@@ -12,6 +12,8 @@ This project was made to explore the Go structs
   * Mutation of struct field doesn't work like JS, lets dive into it. Pointers ahead captain!.
   * Humm, apparently, the receivers methods clone the (kind this value) to a different pointer, keeping the original intact. (Pass by value language)
   * Some magic syntax on pointers, kinda on my exploration, only change the receiver, argument adding the *, resolved but the class showed some boilerplate, maybe it's some old-school way to do it.
+  * When logging a pointer, the output starts with the & symbol to indicate it's a pointer.
+  * the (*x) operators only works if the argument has the "*" pointer indicator symbol.
 
 ## Notes
 
