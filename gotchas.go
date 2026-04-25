@@ -32,6 +32,17 @@ func goPointerGotChas() {
 	// even passing the pointer as a parameter, it  prints differently memory address
 	// the pointers are cloned, their head is in different memory locations but the reference is the same
 
+	otherName := "Boris"
+	returnedName := updateStringAndReturn(otherName)
+	fmt.Println(returnedName) // John
+	// even not passing a pointer, it returns the cloned value that was passed and mutated in the function
+	fmt.Println(otherName) // Boris
+
+}
+
+func updateStringAndReturn(n string) string {
+	n = "John"
+	return n
 }
 
 func updateSlice(s customSlice) {
