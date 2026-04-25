@@ -24,11 +24,12 @@ When declaring some variables, and not assigning them a value, they are zero val
 -- It's weird, not default undefined like JS, not nil either, let's check how they manage it.
 -- Apparently, with structs, the zero value will follow the fields' types.
 
-Type |> Zero Value
-string |> ""
-int |> 0
-float |> 0.0
-bool |> false
+### ype |> Zero Value
+
+* string |> ""
+* int |> 0
+* float |> 0.0
+* bool |> false
 
 ## Value Types
 
